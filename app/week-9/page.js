@@ -7,11 +7,7 @@ import { useUserAuth } from "./_utils/auth-context";
 
 export default function Page() {
   const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
-
   console.log(user);
-
-  
-
   return (
     <div>
       <h1>week 9</h1>
@@ -23,7 +19,8 @@ export default function Page() {
         )}
       </p>
 
-      {user && (<p> welcome {user.displayName}! Your email address is {user.email}. And you look like : < img src ={user.photoURL}  alt={user.displayName}/> <Link href="/week-9/shopping-list">Visit the Landing page.</Link>. </p> )}
+      {user && (<p> Welcome to my website {user.displayName}! Your email address is {user.email} 
+        <Link href="/week-9/shopping-list">Explore the Landing page.</Link>. </p> )}
     </div>
   );
 }
